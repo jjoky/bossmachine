@@ -13,7 +13,8 @@ const cors = require('cors');
 app.use(cors()); 
 
 // Add middware for parsing request bodies here:
-
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 
 // Mount your existing apiRouter below at the '/api' path.
 const apiRouter = require('./server/api');
@@ -22,5 +23,6 @@ const apiRouter = require('./server/api');
 // This conditional is here for testing purposes:
 if (!module.parent) { 
   // Add your code to start the server listening at PORT below:
+  
 
 }
