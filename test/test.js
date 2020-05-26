@@ -36,7 +36,7 @@ describe('/api/minions routes', function() {
 
   });
 
-  describe('GET /minions/:minionId', function() {
+  describe('GET /api/minions/:minionId', function() {
   
       it('returns a single minion object', function() {
         return request(app)
