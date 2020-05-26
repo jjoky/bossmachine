@@ -28,4 +28,11 @@ minionsRouter.get('/:minionId', (req, res, next) => {
     res.send(req.minion);
 });
 
+minionsRouter.put('/:minionId', (req, res, next) => {
+    const updatedMinion = updateInstanceInDatabase('minions', req.body);
+    res.send(updatedMinion);
+});
+
+
+
 module.exports = minionsRouter;
