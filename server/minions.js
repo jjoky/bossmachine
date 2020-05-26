@@ -33,6 +33,9 @@ minionsRouter.put('/:minionId', (req, res, next) => {
     res.send(updatedMinion);
 });
 
-
+minionsRouter.post('/', (req, res, next) => {
+    const newMinion = addToDatabase('minions', req.body);
+    res.status(201).send(newMinion);
+});
 
 module.exports = minionsRouter;
