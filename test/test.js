@@ -273,7 +273,7 @@ describe('/api/ideas routes', function() {
 
   });
 
-  describe('GET /ideas/:ideaId', function() {
+  describe('GET api/ideas/:ideaId', function() {
 
     it('returns a single idea object', function() {
       return request(app)
@@ -435,7 +435,7 @@ describe('/api/ideas routes', function() {
 
   });
 
-  describe('DELETE /api/ideas', function() {
+  describe('DELETE /api/ideas/:ideaId', function() {
     
     it('deletes the correct minion by id', function() {
       let initialIdeasArray;
