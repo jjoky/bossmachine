@@ -197,7 +197,7 @@ describe('/api/minions routes', function() {
 
   });
 
-  describe('DELETE /api/minions', function() {
+  describe('DELETE /api/minions/:minionId', function() {
     
     it('deletes the correct minion by id', function() {
       let initialMinionsArray;
