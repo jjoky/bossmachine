@@ -11,9 +11,7 @@ const {
 } = require('./db.js');
 
 minionsRouter.param('minionId', (req, res, next, id) => {
-    const minionId = Number(id);
     const minion = getFromDatabaseById('minions', id);
-
     if (minion) {
         req.minion = minion;
         next();
