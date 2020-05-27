@@ -273,7 +273,7 @@ describe('/api/ideas routes', function() {
 
   });
 
-  describe('GET api/ideas/:ideaId', function() {
+  describe('GET /api/ideas/:ideaId', function() {
 
     it('returns a single idea object', function() {
       return request(app)
