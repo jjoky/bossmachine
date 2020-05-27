@@ -34,4 +34,11 @@ workRouter.put('/:workId', (req, res, next) => {
     }
 });
 
+workRouter.post('/', (req, res, next) => {
+    const workToAdd = req.body;
+    workToAdd.minionId = req.params.minionId;
+    const newWork = addToDatabase('work', workToAdd);
+    res.status(201).send(newWork);
+});
+
 module.exports = workRouter;
