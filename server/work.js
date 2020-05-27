@@ -41,4 +41,14 @@ workRouter.post('/', (req, res, next) => {
     res.status(201).send(newWork);
 });
 
+workRouter.delete('/:workId', (req,res, next) => {
+    const isWorkDeleted = deleteFromDatabasebyId('work', req.params.workId);
+    if (isWorkDeleted) {
+        res.status(204);
+    } else {
+        res.status(500);
+    }
+    res.send();
+});
+
 module.exports = workRouter;
