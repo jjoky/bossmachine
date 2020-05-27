@@ -38,4 +38,14 @@ ideasRouter.post('/', (req, res, next) => {
     res.status(201).send(newIdea);
 });
 
+ideasRouter.delete('/:ideaId', (req, res, next) => {
+    const isIdeaDeleted = deleteFromDatabasebyId('ideas', req.params.ideaId);
+    if(isIdeaDeleted) {
+        res.status(204);
+    } else {
+        res.status(500);
+    }
+    res.send();
+})
+
 module.exports = ideasRouter;
