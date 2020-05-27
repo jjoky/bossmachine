@@ -1,13 +1,11 @@
 const express = require('express');
 const minionsRouter = express.Router();
 const {
-    createMeeting,
     getAllFromDatabase,
     getFromDatabaseById,
     addToDatabase,
     updateInstanceInDatabase,
-    deleteFromDatabasebyId,
-    deleteAllFromDatabase
+    deleteFromDatabasebyId
 } = require('./db.js');
 
 minionsRouter.param('minionId', (req, res, next, id) => {
